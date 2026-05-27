@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="description"
+    content="Material Apprentice: AI-powered procedural material generation for Blender."
+  >
+
+  <title>Material Apprentice</title>
+
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+    rel="stylesheet"
+  >
+
+  <!-- Bulma -->
+  <link
+    rel="stylesheet"
+    href="./static/css/bulma.min.css"
+  >
+
+  <!-- FontAwesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  >
+
+  <style>
+    body {
+      font-family: 'Noto Sans', sans-serif;
+      background: #ffffff;
+      color: #111111;
+    }
+
+    .publication-title {
+      font-family: 'Google Sans', sans-serif;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+
+    .hero.is-light {
+      background: #f7f8fb;
+    }
+
+    .teaser-image {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .publication-links .button {
+      margin: 0.25rem;
+    }
+
+    .feature-box {
+      height: 100%;
+      border-radius: 16px;
+    }
+
+    .section-divider {
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer {
+      padding-bottom: 3rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ===================================================== -->
+<!-- HERO -->
+<!-- ===================================================== -->
+
+<section class="hero">
+  <div class="hero-body">
+
+    <div class="container is-max-desktop">
+
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+
+          <h1 class="title is-1 publication-title">
+            Material Apprentice
+          </h1>
+
+          <h2 class="subtitle is-4 mt-4">
+            AI-powered procedural material generation for Blender
+          </h2>
+
+          <p class="is-size-5 mt-5">
+            Generate export-ready procedural materials from
+            natural language and reference images.
+          </p>
+
+          <!-- Buttons -->
+          <div class="publication-links mt-5">
+
+            <span class="link-block">
+              <a
+                href="https://github.com/materialapprentice"
+                class="external-link button is-dark is-rounded"
+              >
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+
+                <span>GitHub</span>
+              </a>
+            </span>
+
+            <span class="link-block">
+              <a
+                href="mailto:materialapprentice@gmail.com"
+                class="external-link button is-dark is-rounded"
+              >
+                <span class="icon">
+                  <i class="fas fa-envelope"></i>
+                </span>
+
+                <span>Request Access</span>
+              </a>
+            </span>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================================================== -->
+<!-- TEASER -->
+<!-- ===================================================== -->
+
+<section class="hero is-light">
+
+  <div class="hero-body">
+
+    <div class="container is-max-desktop has-text-centered">
+
+      <!-- Replace with your own image -->
+      <img
+        src="./static/images/teaser.jpg"
+        alt="Material Apprentice teaser"
+        class="teaser-image"
+      >
+
+      <p class="subtitle has-text-centered mt-5">
+        Prompt → procedural node graph → export-ready Blender material
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- ABSTRACT -->
+<!-- ===================================================== -->
+
+<section class="section">
+
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered has-text-centered">
+
+      <div class="column is-four-fifths">
+
+        <h2 class="title is-3">
+          Overview
+        </h2>
+
+        <div class="content has-text-justified">
+
+          <p>
+            Material Apprentice is an AI system for generating
+            procedural Blender materials from natural language prompts.
+          </p>
+
+          <p>
+            The system synthesizes editable node graphs,
+            exposes artist-friendly controls,
+            and exports reusable procedural assets directly inside Blender.
+          </p>
+
+          <p>
+            Users can generate complex materials such as rocks,
+            metals, fabrics, food surfaces, and sci-fi materials
+            using simple text prompts and optional reference images.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- FEATURES -->
+<!-- ===================================================== -->
+
+<section class="section">
+
+  <div class="container is-max-desktop">
+
+    <div class="columns">
+
+      <div class="column">
+        <div class="box feature-box">
+
+          <h3 class="title is-4">
+            Procedural Node Graphs
+          </h3>
+
+          <p>
+            Generates clean and editable Blender shader node trees
+            instead of baked textures.
+          </p>
+
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="box feature-box">
+
+          <h3 class="title is-4">
+            Artist-Friendly Controls
+          </h3>
+
+          <p>
+            Automatically creates reusable node groups
+            with intuitive exposed parameters.
+          </p>
+
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="box feature-box">
+
+          <h3 class="title is-4">
+            Export-Ready Assets
+          </h3>
+
+          <p>
+            Outputs reusable Blender assets
+            that can be shared across projects.
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- EXAMPLES -->
+<!-- ===================================================== -->
+
+<section class="section">
+
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+      <div class="column has-text-centered">
+
+        <h2 class="title is-3">
+          Example Materials
+        </h2>
+
+      </div>
+
+    </div>
+
+    <div class="columns">
+
+      <div class="column">
+        <img
+          src="./static/images/example1.png"
+          class="teaser-image"
+        >
+      </div>
+
+      <div class="column">
+        <img
+          src="./static/images/example2.png"
+          class="teaser-image"
+        >
+      </div>
+
+      <div class="column">
+        <img
+          src="./static/images/example3.png"
+          class="teaser-image"
+        >
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- FOOTER -->
+<!-- ===================================================== -->
+
+<footer class="footer">
+
+  <div class="container">
+
+    <div class="content has-text-centered">
+
+      <p>
+        Material Apprentice © 2026
+      </p>
+
+    </div>
+
+  </div>
+
+</footer>
+
+</body>
+</html>
