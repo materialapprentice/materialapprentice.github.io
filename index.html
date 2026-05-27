@@ -324,6 +324,129 @@
 
 </section>
 
+
+
+<!-- ===================================================== -->
+<!-- FORM -->
+<!-- ===================================================== -->
+
+<section class="section">
+
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+
+      <div class="column is-two-thirds">
+
+        <div class="box">
+
+          <h2 class="title is-3 has-text-centered">
+            Generate a Material
+          </h2>
+
+          <form onsubmit="submitMaterialRequest(event)">
+
+            <!-- Prompt -->
+            <div class="field">
+              <label class="label">
+                Material Prompt
+              </label>
+
+              <div class="control">
+                <textarea
+                  id="prompt"
+                  class="textarea"
+                  rows="4"
+                  placeholder="e.g. alien volcanic rock with glowing blue seams"
+                  required
+                ></textarea>
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="field">
+              <label class="label">
+                Email
+              </label>
+
+              <div class="control">
+                <input
+                  id="email"
+                  class="input"
+                  type="email"
+                  placeholder="you@example.com"
+                  required
+                >
+              </div>
+            </div>
+
+            <!-- API Key -->
+            <div class="field">
+              <label class="label">
+                OpenAI API Key
+              </label>
+
+              <div class="control">
+                <input
+                  id="apikey"
+                  class="input"
+                  type="password"
+                  placeholder="sk-..."
+                  required
+                >
+              </div>
+
+              <p class="help">
+                Your key is only used for your generation job.
+              </p>
+            </div>
+
+            <!-- Image -->
+            <div class="field">
+              <label class="label">
+                Reference Image (optional)
+              </label>
+
+              <div class="control">
+                <input
+                  id="image"
+                  class="input"
+                  type="file"
+                  accept="image/*"
+                >
+              </div>
+            </div>
+
+            <!-- Submit -->
+            <div class="field mt-5">
+              <div class="control has-text-centered">
+                <button
+                  class="button is-dark is-medium is-rounded"
+                  type="submit"
+                >
+                  Generate Material
+                </button>
+              </div>
+            </div>
+
+          </form>
+
+          <p
+            id="status"
+            class="has-text-centered mt-4"
+          ></p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
 <!-- ===================================================== -->
 <!-- FOOTER -->
 <!-- ===================================================== -->
@@ -343,6 +466,8 @@
   </div>
 
 </footer>
+
+<script src="./static/js/main.js"></script>
 
 </body>
 </html>
