@@ -7,6 +7,7 @@ async function submitMaterialRequest(event) {
   const imageFile = document.getElementById("image").files[0];
 
   const status = document.getElementById("status");
+
   status.innerText = "Submitting request...";
 
   const formData = new FormData();
@@ -19,28 +20,47 @@ async function submitMaterialRequest(event) {
     formData.append("image", imageFile);
   }
 
+  const controller = new AbortController();
+
+  const timeout = setTimeout(() => {
+    controller.abort();
+  }, 30000);
+
   try {
     const response = await fetch(
-      "http://YOUR_SERVER_IP:8000/submit",
+      "http://chetak.ucsd.edu:8002/submit",
       {
         method: "POST",
-        body: formData
+        body: formData,
+        signal: controller.signal
       }
     );
 
-    const data = await response.json();
+    clearTimeout(timeout);
+
+    let data = {};
+
+    try {
+      data = await response.json();
+    } catch {}
 
     if (response.ok) {
       status.innerText =
-        "Request submitted successfully! Check your email later.";
+        "Request submitted successfully! You will receive an email when the asset is ready.";
     } else {
       status.innerText =
-        "Error: " + data.detail;
+        "Error: " + (data.detail || "Unknown server error.");
     }
 
   } catch (err) {
     console.error(err);
-    status.innerText =
-      "Failed to contact server.";
+
+    if (err.name === "AbortError") {
+      status.innerText =
+        "Request timed out.";
+    } else {
+      status.innerText =
+        "Failed to contact server.";
+    }
   }
 }
