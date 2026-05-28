@@ -28,13 +28,13 @@ async function submitMaterialRequest(event) {
 
   try {
     const response = await fetch(
-      "http://chetak.ucsd.edu:8002/submit",
-      {
-        method: "POST",
-        body: formData,
-        signal: controller.signal
-      }
-    );
+        "https://chetak.ucsd.edu/material-apprentice/submit",
+        {
+            method: "POST",
+            body: formData,
+            signal: controller.signal
+        }
+        );
 
     clearTimeout(timeout);
 
